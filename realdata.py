@@ -13,12 +13,17 @@ You can choose between **Quick Mode (sample)** for faster reports or **Full Mode
 """)
 
 # Sample datasets
+@st.cache_data
+def load_sample_data(name):
+    return sns.load_dataset(name)
+
 sample_datasets = {
-    "Diamonds": sns.load_dataset("diamonds"),
-    "Titanic": sns.load_dataset("titanic"),
-    "Iris": sns.load_dataset("iris"),
-    "Tips": sns.load_dataset("tips"),
+    "Diamonds": load_sample_data("diamonds"),
+    "Titanic": load_sample_data("titanic"),
+    "Iris": load_sample_data("iris"),
+    "Tips": load_sample_data("tips"),
 }
+
 
 sample_choice = st.selectbox("Or choose a sample dataset:", ["None"] + list(sample_datasets.keys()))
 
