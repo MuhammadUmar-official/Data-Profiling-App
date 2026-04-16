@@ -1,8 +1,9 @@
 streamlit==1.37.1
-pandas==2.2.2
-ydata-profiling==4.5.1
+pandas==1.5.3
+numpy==1.23.5
 matplotlib==3.7.1
 seaborn==0.12.2
-numpy==1.24.3
-
-
+ydata-profiling==4.5.1
+openpyxl
+visions
+pydantic
